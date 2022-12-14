@@ -4963,27 +4963,39 @@
                 }));
             }));
         }
-        jquery.notify.addStyle("WithBtnTemp", {
-            html: "<div>" + "<div class='clearfix'>" + '<div class="login-notify">' + '<div class="login-notify__top-line">' + '<div class="login-notify__img"><img src="./img/small-logo.svg" alt="logo" /></div>' + '<p class="login-notify__system-name">Finance24 Auth System</p>' + "</div>" + '<div class="login-notify__content">' + '<p class="login-notify__hi">Hi Anastassia!</p>' + '<p class="login-notify__text" data-notify-text>Lorem ipsum dolor sit amet, consectetur </p>' + "</div>" + ' <div class="login-notify__buttons">' + '<button type="button" class="login-notify__btn  ">Accept</button>' + '<button type="button" class="login-notify__btn no ">Reject</button>' + "</div>" + '<button type="button" class="login-notify__close-btn"><img src="./img/close.svg" alt="close" /></button>' + "</div>" + "</div>" + "</div>"
+        const notifyTempWithBtn = document.querySelector("#notifyTemplate").innerHTML;
+        const notifyTempWithoutBtn = document.querySelector("#notifyTemplateWithout").innerHTML;
+        jquery.notify.addStyle("notifyWithBtn", {
+            html: notifyTempWithBtn,
+            classes: {}
         });
-        jquery.notify.addStyle("WithoutBtnTemp", {
-            html: "<div>" + "<div class='clearfix'>" + '<div class="login-notify">' + '<div class="login-notify__top-line">' + '<div class="login-notify__img"><img src="./img/small-logo.svg" alt="logo" /></div>' + '<p class="login-notify__system-name">Finance24 Auth System</p>' + "</div>" + '<div class="login-notify__content">' + '<p class="login-notify__hi">Hi Anastassia!</p>' + '<p class="login-notify__text" data-notify-text>Lorem ipsum dolor sit amet, consectetur </p>' + "</div>" + '<button type="button" class="login-notify__close-btn"><img src="./img/close.svg" alt="close" /></button>' + "</div>" + "</div>" + "</div>"
-        });
-        jquery.notify({
-            title: "Would you like some Foo ?",
-            button: "Confirm"
-        }, {
-            style: "WithBtnTemp",
-            autoHide: true,
-            clickToHide: true
+        jquery.notify.addStyle("notifyTempWithoutBtn", {
+            html: notifyTempWithoutBtn,
+            classes: {}
         });
         jquery.notify({
-            title: "Would you like some Foo ?",
-            button: "Confirm"
+            name: "Hi Anastassia!",
+            text: "Lorem ipsum dolor sit amet, consectetur "
         }, {
-            style: "WithoutBtnTemp",
-            autoHide: true,
-            clickToHide: true
+            style: "notifyWithBtn",
+            autoHide: false
         });
+        jquery.notify({
+            name: "Hi Anastassia!",
+            text: "Lorem ipsum dolor sit amet, consectetur "
+        }, {
+            style: "notifyTempWithoutBtn",
+            autoHide: false
+        });
+        jquery(".login-notify__close-btn").on("click", (function() {
+            jquery(this).trigger("notify-hide");
+        }));
+        jquery(".login-notify__btn-reject").on("click", (function() {
+            jquery(this).trigger("notify-hide");
+        }));
+        jquery(".login-notify__btn-accept").on("click", (function() {
+            alert(jquery(this).text() + " clicked!");
+            jquery(this).trigger("notify-hide");
+        }));
     })();
 })();

@@ -274,9 +274,11 @@
    color: var(--white);
    position: relative;
    width: 340px;
-   @media (max-width: 767.98px) {
-      width: 290px;
+   @media (max-width: 575.98px) {
+      width: 90%;
+      margin: auto;
    }
+
    &__top-line {
       display: flex;
       align-items: center;
@@ -339,7 +341,13 @@
       img {
          width: 10px;
          height: 10px;
+         pointer-events: none;
       }
+   }
+}
+.notifyjs-corner {
+   @media (max-width: 575.98px) {
+      width: 100%;
    }
 }
 //NotifyEnd========================================================================================================================================================

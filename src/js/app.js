@@ -31,67 +31,47 @@ function selects() {
       }
    })
 }
+const notifyTempWithBtn = document.querySelector('#notifyTemplate').innerHTML
+const notifyTempWithoutBtn = document.querySelector('#notifyTemplateWithout').innerHTML
 
-$.notify.addStyle('WithBtnTemp', {
-   html:
-      '<div>' +
-      "<div class='clearfix'>" +
-      '<div class="login-notify">' +
-      '<div class="login-notify__top-line">' +
-      '<div class="login-notify__img"><img src="./img/small-logo.svg" alt="logo" /></div>' +
-      '<p class="login-notify__system-name">Finance24 Auth System</p>' +
-      '</div>' +
-      '<div class="login-notify__content">' +
-      '<p class="login-notify__hi">Hi Anastassia!</p>' +
-      '<p class="login-notify__text" data-notify-text>Lorem ipsum dolor sit amet, consectetur </p>' +
-      '</div>' +
-      ' <div class="login-notify__buttons">' +
-      '<button type="button" class="login-notify__btn  ">Accept</button>' +
-      '<button type="button" class="login-notify__btn no ">Reject</button>' +
-      '</div>' +
-      '<button type="button" class="login-notify__close-btn"><img src="./img/close.svg" alt="close" /></button>' +
-      '</div>' +
-      '</div>' +
-      '</div>',
+$.notify.addStyle('notifyWithBtn', {
+   html: notifyTempWithBtn,
+   classes: {},
 })
-$.notify.addStyle('WithoutBtnTemp', {
-   html:
-      '<div>' +
-      "<div class='clearfix'>" +
-      '<div class="login-notify">' +
-      '<div class="login-notify__top-line">' +
-      '<div class="login-notify__img"><img src="./img/small-logo.svg" alt="logo" /></div>' +
-      '<p class="login-notify__system-name">Finance24 Auth System</p>' +
-      '</div>' +
-      '<div class="login-notify__content">' +
-      '<p class="login-notify__hi">Hi Anastassia!</p>' +
-      '<p class="login-notify__text" data-notify-text>Lorem ipsum dolor sit amet, consectetur </p>' +
-      '</div>' +
-      '<button type="button" class="login-notify__close-btn"><img src="./img/close.svg" alt="close" /></button>' +
-      '</div>' +
-      '</div>' +
-      '</div>',
+$.notify.addStyle('notifyTempWithoutBtn', {
+   html: notifyTempWithoutBtn,
+   classes: {},
 })
 
 $.notify(
    {
-      title: 'Would you like some Foo ?',
-      button: 'Confirm',
+      name: 'Hi Anastassia!',
+      text: 'Lorem ipsum dolor sit amet, consectetur ',
    },
    {
-      style: 'WithBtnTemp',
-      autoHide: true,
-      clickToHide: true,
+      style: 'notifyWithBtn',
+      autoHide: false,
    }
 )
 $.notify(
    {
-      title: 'Would you like some Foo ?',
-      button: 'Confirm',
+      name: 'Hi Anastassia!',
+      text: 'Lorem ipsum dolor sit amet, consectetur ',
    },
    {
-      style: 'WithoutBtnTemp',
-      autoHide: true,
-      clickToHide: true,
+      style: 'notifyTempWithoutBtn',
+      autoHide: false,
    }
 )
+
+$('.login-notify__close-btn').on('click', function () {
+   $(this).trigger('notify-hide')
+})
+$('.login-notify__btn-reject').on('click', function () {
+   $(this).trigger('notify-hide')
+})
+
+$('.login-notify__btn-accept').on('click', function () {
+   alert($(this).text() + ' clicked!')
+   $(this).trigger('notify-hide')
+})

@@ -353,6 +353,7 @@ body {
 .login-notify__close-btn img {
   width: 10px;
   height: 10px;
+  pointer-events: none;
 }
 
 @media (min-width: 991.98px) {
@@ -396,12 +397,6 @@ body {
   }
 }
 
-@media (max-width: 767.98px) {
-  .login-notify {
-    width: 290px;
-  }
-}
-
 @media (max-width: 575.98px) {
   .wrapper {
     min-height: 750px;
@@ -427,6 +422,15 @@ body {
 
   .login-form__form .btn {
     padding: 10px 10px;
+  }
+
+  .login-notify {
+    width: 90%;
+    margin: auto;
+  }
+
+  .notifyjs-corner {
+    width: 100%;
   }
 }
 
