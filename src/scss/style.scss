@@ -14,20 +14,231 @@ body {
    font-family: $fontFamily;
    font-size: $fontSize;
    color: var(--black);
-   position: relative;
 }
-.wrapper {
-   height: 100%;
+
+//Switch Class========================================================================================================================================================
+.left .login-content {
+   display: flex;
+   flex-direction: row-reverse;
+}
+//Main========================================================================================================================================================
+.login {
    height: 100vh;
    min-height: 800px;
    overflow-x: hidden;
    overflow-y: auto;
+
    @media (max-width: 575.98px) {
       min-height: 750px;
    }
+
+   .login-logo {
+      width: 180px;
+      img {
+         max-width: 100%;
+         object-fit: contain;
+      }
+   }
+   .carousel-item {
+      img {
+         object-fit: cover;
+         z-index: -1;
+      }
+   }
+   .logit-title {
+      font-size: 65px;
+      letter-spacing: -0.03em;
+      line-height: 100%;
+   }
+   .carousel-indicators [data-bs-target] {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transition: all 0.3s ease 0s;
+      &.active {
+         width: 16px;
+         height: 16px;
+         border: solid 3px var(--white);
+         background: transparent;
+         transition: all 0.3s ease 0s;
+      }
+   }
+   .social-list {
+      img {
+         width: 20px;
+         height: 20px;
+         object-fit: contain;
+      }
+   }
+   .login-link {
+      padding: 20px 10px;
+      width: 100%;
+   }
+   .login-form {
+      max-width: 415px;
+      width: 100%;
+      @media (max-width: 575.98px) {
+         padding: 0px 15px;
+      }
+   }
 }
+//Select========================================================================================================================================================
+.lang-select {
+   &._active {
+      .lang-select__body {
+         opacity: 1;
+         visibility: visible;
+         transition: all 0.3s ease 0s;
+      }
+      .lang-select__arrow {
+         transform: rotate(-180deg);
+         transition: all 0.3s ease 0s;
+      }
+   }
+   &__head {
+      background: rgba(242, 243, 244, 0.5);
+      border-radius: 5px;
+      padding: 11px 15px;
+      border: none;
+      color: var(--white);
+      gap: 5px;
+      max-width: 70px;
+   }
 
-//============================================================================================================================================================================================================================================================================================================================================================================================================================================
+   &__value {
+      pointer-events: none;
+   }
 
-// Подключение страниц
-@import './home.scss';
+   &__arrow {
+      width: 20px;
+      height: 8px;
+      transition: all 0.3s ease 0s;
+      pointer-events: none;
+   }
+
+   &__body {
+      right: 0;
+      top: 100%;
+      background: var(--white);
+      border: 1px solid #d7d7d7;
+      border-radius: 10px;
+      padding: 10px 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-row: repeat(3, 1fr);
+      grid-gap: 10px;
+      word-wrap: break-word;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      max-height: 600px;
+      overflow: hidden;
+      overflow-y: auto;
+      @media (max-width: 575.98px) {
+         max-width: 290px;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-row: repeat(2, 1fr);
+      }
+   }
+
+   &__item {
+      display: block;
+      border: none;
+      background-color: var(--white);
+      border-radius: 10px;
+      padding: 5px 10px;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #d7d7d7;
+            transition: all 0.3s ease 0s;
+         }
+      }
+   }
+}
+//Notify============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.login-notify {
+   background: rgba(45, 45, 47, 0.88);
+   border-radius: 20px;
+   padding: 15px 15px;
+   color: var(--white);
+   position: relative;
+   width: 340px;
+   @media (max-width: 575.98px) {
+      width: 90%;
+      margin: auto;
+   }
+
+   &__top-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+   }
+
+   &__img {
+      img {
+         width: 15px;
+         height: 15px;
+      }
+   }
+
+   &__system-name {
+      color: #109cf1;
+      margin: 0px 0px 0px 0px;
+   }
+   &__text {
+      font-size: 13px;
+      margin: 0px 0px 15px 0px;
+   }
+
+   &__buttons {
+      display: flex;
+   }
+   &__btn {
+      flex: 0 0 50%;
+      background: transparent;
+      border: none;
+      color: #109cf1;
+      @media (any-hover: hover) {
+         &:hover {
+            transition: all 0.3s ease 0s;
+            background-color: rgba(255, 255, 255, 0.2);
+         }
+      }
+      &:first-child {
+         border-right: 1px solid #8d83fc;
+         border-radius: 10px 0 0 10px;
+      }
+      &:last-child {
+         border-radius: 0 10px 10px 0;
+      }
+   }
+   &__close-btn {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      background: transparent;
+      border: none;
+      border-radius: 50%;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+         &:hover {
+            transition: all 0.3s ease 0s;
+            background-color: rgba(255, 255, 255, 0.2);
+         }
+      }
+      img {
+         width: 10px;
+         height: 10px;
+         pointer-events: none;
+      }
+   }
+}
+.notifyjs-corner {
+   @media (max-width: 575.98px) {
+      width: 100%;
+   }
+}
+//========================================================================================================================================================
