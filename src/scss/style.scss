@@ -1,21 +1,11 @@
-// Шрифты ===========================================================================================================================================================================================================================================================================
+// Fonts===========================================================================================================================================================================================================================================================================
 @import url('https://fonts.googleapis.com/css?family=Montserrat:regular,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Inter:300,700&display=swap');
-//========================================================================================================================================================
-$fontFamily: 'Montserrat';
-$fontSize: 15px;
-
-:root {
-   --black: #111111;
-   --white: #ffffff;
-   --gray: #f3f7fb;
-}
+//Config========================================================================================================================================================
 body {
-   font-family: $fontFamily;
-   font-size: $fontSize;
-   color: var(--black);
+   font-family: 'Montserrat';
+   font-size: 15px;
+   color: #111111;
 }
-
 //Switch Class========================================================================================================================================================
 .left .login-content {
    display: flex;
@@ -58,7 +48,7 @@ body {
       &.active {
          width: 16px;
          height: 16px;
-         border: solid 3px var(--white);
+         border: solid 3px #ffffff;
          background: transparent;
          transition: all 0.3s ease 0s;
       }
@@ -100,7 +90,7 @@ body {
       border-radius: 5px;
       padding: 11px 15px;
       border: none;
-      color: var(--white);
+      color: #ffffff;
       gap: 5px;
       max-width: 70px;
    }
@@ -119,7 +109,7 @@ body {
    &__body {
       right: 0;
       top: 100%;
-      background: var(--white);
+      background: #ffffff;
       border: 1px solid #d7d7d7;
       border-radius: 10px;
       padding: 10px 20px;
@@ -145,7 +135,7 @@ body {
    &__item {
       display: block;
       border: none;
-      background-color: var(--white);
+      background-color: #ffffff;
       border-radius: 10px;
       padding: 5px 10px;
       transition: all 0.3s ease 0s;
@@ -162,7 +152,7 @@ body {
    background: rgba(45, 45, 47, 0.88);
    border-radius: 20px;
    padding: 15px 15px;
-   color: var(--white);
+   color: #ffffff;
    position: relative;
    width: 340px;
    @media (max-width: 575.98px) {
