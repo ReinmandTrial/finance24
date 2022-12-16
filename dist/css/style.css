@@ -221,6 +221,7 @@ body {
 .form-auth__input {
   padding: 17px 20px;
   border: 1px solid #d7d7d7;
+  border-radius: 5px;
 }
 
 .form-auth__input:focus {
@@ -235,6 +236,8 @@ body {
 .form-auth__btn {
   background-color: var(--blue);
   padding: 14px 0px !important;
+  border-radius: 5px;
+  border: none;
 }
 
 .login {
@@ -387,10 +390,22 @@ body {
   top: 15px;
   background: transparent;
   border: none;
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  padding: 0px 0px 0px 0px;
 }
 
 .login-notify__close-btn img {
