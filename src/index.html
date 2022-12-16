@@ -24,69 +24,12 @@
 
    <body>
       <div class="login">
-         <div class="container-fluid h-100">
-            <div class="login-content row h-100">
-               <div class="col-6 h-100 p-0 d-none d-lg-block position-relative">
-                  <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="true">
-                     <div class="carousel-indicators align-items-center start-50 translate-middle-x m-0 my-5 p-5 gap-4">
-                        <button
-                           type="button"
-                           data-bs-target="#carouselExampleIndicators"
-                           data-bs-slide-to="0"
-                           class="active login-carousel-btn"
-                           aria-current="true"
-                           aria-label="Slide 1"
-                        ></button>
-                        <button
-                           type="button"
-                           data-bs-target="#carouselExampleIndicators"
-                           data-bs-slide-to="1"
-                           aria-label="Slide 2"
-                           class="login-carousel-btn"
-                        ></button>
-                        <button
-                           type="button"
-                           data-bs-target="#carouselExampleIndicators"
-                           data-bs-slide-to="2"
-                           aria-label="Slide 3"
-                           class="login-carousel-btn"
-                        ></button>
-                     </div>
-                     <div class="carousel-inner h-100 text-white">
-                        <div class="carousel-item active h-100 position-relative">
-                           <img src="@img/bg1.png" class="d-block w-100 h-100 position-absolute top-0 left-0" alt="bg1" />
-                           <div class="mx-auto px-5 h-100 d-flex flex-column justify-content-center">
-                              <p class="fw-bolder mb-5 logit-title">Financial services for individuals.</p>
-                              <p class="fz-6 fw-light lh-lg">
-                                 Besides visit our branches, customers can access services 24 hours a day via Mobile Banking service.
-                              </p>
-                           </div>
-                        </div>
-                        <div class="carousel-item h-100 position-relative">
-                           <img src="@img/bg2.png" class="d-block w-100 h-100 position-absolute top-0 left-0" alt="bg2" />
-                           <div class="mx-auto px-5 h-100 d-flex flex-column justify-content-center">
-                              <p class="fw-bolder logit-title">Financial services for individuals.</p>
-                              <p class="fz-6 fw-light lh-lg">
-                                 Besides visit our branches, customers can access services 24 hours a day via Mobile Banking service.
-                              </p>
-                           </div>
-                        </div>
-                        <div class="carousel-item h-100 position-relative">
-                           <img src="@img/bg3.png" class="d-block w-100 h-100 position-absolute top-0 left-0" alt="bg3" />
-                           <div class="mx-auto px-5 h-100 d-flex flex-column justify-content-center">
-                              <p class="fw-bolder logit-title">Financial services for individuals.</p>
-                              <p class="fz-6 fw-light lh-lg">
-                                 Besides visit our branches, customers can access services 24 hours a day via Mobile Banking service.
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div
-                     class="position-absolute w-100 translate-middle-x start-50 top-0 px-5 pt-5 d-flex justify-content-between align-items-center"
-                  >
-                     <a class="login-logo" href="#"> <img src="@img/logo-white.png" alt="logo" /></a>
-                     <div data-select class="lang-select position-relative">
+         <div class="container-fluid h-100 p-0">
+            <div class="login__content row h-100 p-0 m-0">
+               <div class="col-6 h-100 d-none d-lg-block p-0 m-0 position-relative">
+                  <div class="login__slider-top-line top-line d-flex justify-content-between align-items-center w-100 position-absolute">
+                     <a class="top-line__logo" href="#"> <img class="h-100" src="@img/logo-white.svg" alt="logo" /></a>
+                     <div data-select class="top-line__lang-select lang-select position-relative">
                         <button type="button" class="lang-select__head d-flex align-items-center w-100">
                            <span data-select-val class="lang-select__value">EN</span>
                            <img class="lang-select__arrow" src="@img/arrow-white.svg" alt="arrow" />
@@ -107,76 +50,112 @@
                         </div>
                      </div>
                   </div>
-               </div>
-               <div class="col-12 col-lg-6 h-100 p-0 d-flex flex-column justify-content-center align-items-center position-relative">
-                  <div class="position-absolute top-0 w-100 d-lg-none">
-                     <div class="d-flex justify-content-between px-4 pt-4 d-flex align-items-center">
-                        <a href="#" class="login-logo"><img src="@img/logo-black.png" alt="logo" /></a>
-                        <div data-select class="lang-select position-relative">
-                           <button type="button" class="lang-select__head d-flex align-items-center w-100">
-                              <span data-select-val class="lang-select__value text-dark">EN</span>
-                              <img class="lang-select__arrow" src="@img/arrow-black.svg" alt="arrow" />
-                           </button>
-                           <div class="lang-select__body shadow position-absolute">
-                              <button value="EN" type="button" class="lang-select__item">Английский</button>
-                              <button value="AR" type="button" class="lang-select__item">Арабский</button>
-                              <button value="FR" type="button" class="lang-select__item">Французкий</button>
-                              <button value="AR" type="button" class="lang-select__item">Арабский</button>
-                              <button value="DE" type="button" class="lang-select__item">Немекий</button>
-                              <button value="EN" type="button" class="lang-select__item">Английский</button>
-                              <button value="FR" type="button" class="lang-select__item">Французкий</button>
-                              <button value="EN" type="button" class="lang-select__item">Английский</button>
-                              <button value="AR" type="button" class="lang-select__item">Арабский</button>
-                              <button value="DE" type="button" class="lang-select__item">Немекий</button>
-                              <button value="FR" type="button" class="lang-select__item">Французкий</button>
-                              <button value="EN" type="button" class="lang-select__item">Английский</button>
+                  <div class="h-100 login__slider login-slider swiper w-100 h-100 position-relative overflow-hidden">
+                     <div class="login-slider__wrapper swiper-wrapper h-100 d-flex position-relative">
+                        <div class="login-slider__slide login-slide swiper-slide h-100 position-relative">
+                           <div class="login-slide__image position-absolute w-100 h-100 top-0 start-0">
+                              <img class="w-100 h-100" src="@img/bg1.png" alt="bg1" />
+                           </div>
+                           <div class="login-slide__info position-relative">
+                              <p class="login-slide__title fw-bolder">Financial services for individuals.</p>
+                              <p class="login-slide__text fw-light">
+                                 Besides visit our branches, customers can access services 24 hours a day via Mobile Banking service.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="login-slider__slide login-slide swiper-slide h-100 position-relative">
+                           <div class="login-slide__image position-absolute w-100 h-100 top-0 start-0">
+                              <img class="w-100 h-100" src="@img/bg2.png" alt="bg2" />
+                           </div>
+                           <div class="login-slide__info position-relative">
+                              <p class="login-slide__title fw-bolder">Financial services for individuals.</p>
+                              <p class="login-slide__text fw-light">
+                                 Besides visit our branches, customers can access services 24 hours a day via Mobile Banking service.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="login-slider__slide login-slide swiper-slide h-100 position-relative">
+                           <div class="login-slide__image position-absolute w-100 h-100 top-0 start-0">
+                              <img class="w-100 h-100" src="@img/bg3.png" alt="bg3" />
+                           </div>
+                           <div class="login-slide__info position-relative">
+                              <p class="login-slide__title fw-bolder">Financial services for individuals.</p>
+                              <p class="login-slide__text fw-light">
+                                 Besides visit our branches, customers can access services 24 hours a day via Mobile Banking service.
+                              </p>
                            </div>
                         </div>
                      </div>
+                     <div class="login-slider__pagination swiper-pagination d-flex align-items-center position-absolute"></div>
                   </div>
-                  <div class="login-form">
-                     <p class="text-center fw-bolder h1 mb-5">Login</p>
-                     <div class="social-list d-flex justify-content-between gap-1 mb-4">
-                        <a href="#" class="login-link btn btn-light d-flex justify-content-center align-items-center">
-                           <img src="@img/google.png" alt="google" />
+               </div>
+               <div class="col-12 h-100 col-lg-6 p-0 m-0 position-relative">
+                  <div class="login__form-top-line top-line d-flex justify-content-between align-items-center w-100 position-absolute">
+                     <a class="top-line__logo" href="#"> <img class="h-100" src="@img/logo-black.svg" alt="logo" /></a>
+                     <div data-select class="top-line__lang-select lang-select position-relative">
+                        <button type="button" class="lang-select__head d-flex align-items-center w-100">
+                           <span data-select-val class="lang-select__value text-dark">EN</span>
+                           <img class="lang-select__arrow" src="@img/arrow-black.svg" alt="arrow" />
+                        </button>
+                        <div class="lang-select__body shadow position-absolute">
+                           <button value="EN" type="button" class="lang-select__item">Английский</button>
+                           <button value="AR" type="button" class="lang-select__item">Арабский</button>
+                           <button value="FR" type="button" class="lang-select__item">Французкий</button>
+                           <button value="AR" type="button" class="lang-select__item">Арабский</button>
+                           <button value="DE" type="button" class="lang-select__item">Немекий</button>
+                           <button value="EN" type="button" class="lang-select__item">Английский</button>
+                           <button value="FR" type="button" class="lang-select__item">Французкий</button>
+                           <button value="EN" type="button" class="lang-select__item">Английский</button>
+                           <button value="AR" type="button" class="lang-select__item">Арабский</button>
+                           <button value="DE" type="button" class="lang-select__item">Немекий</button>
+                           <button value="FR" type="button" class="lang-select__item">Французкий</button>
+                           <button value="EN" type="button" class="lang-select__item">Английский</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="login__form-content position-relative">
+                     <p class="login__form-title">Login</p>
+                     <div class="login__form-social-list d-flex justify-content-between">
+                        <a href="#" class="login__form-social-link btn btn-light d-flex justify-content-center align-items-center">
+                           <img src="@img/google.svg" alt="google" />
                         </a>
-                        <a href="#" class="login-link btn btn-light d-flex justify-content-center align-items-center">
+                        <a href="#" class="login__form-social-link btn btn-light d-flex justify-content-center align-items-center">
                            <img src="@img/facebook.png" alt="facebook" />
                         </a>
-                        <a href="#" class="login-link btn btn-light d-flex justify-content-center align-items-center">
-                           <img src="@img/twitter.png" alt="twitter" />
+                        <a href="#" class="login__form-social-link btn btn-light d-flex justify-content-center align-items-center">
+                           <img src="@img/twitter.svg" alt="twitter" />
                         </a>
-                        <a href="#" class="login-link btn btn-light d-flex justify-content-center align-items-center">
-                           <img src="@img/apple.png" alt="apple" />
+                        <a href="#" class="login__form-social-link btn btn-light d-flex justify-content-center align-items-center">
+                           <img src="@img/apple.svg" alt="apple" />
                         </a>
                      </div>
-                     <p class="text-center mb-4">or log in with email</p>
-                     <form class="mb-4">
-                        <div class="mb-3">
-                           <label for="LoginEmail1" class="form-label">Your email </label>
+                     <p class="login__form-or-text">or log in with email</p>
+                     <form class="login__form form-auth">
+                        <div class="form-auth__block">
+                           <label for="LoginEmail1" class="form-label form-auth__label">Your email </label>
                            <input
                               placeholder="Enter your Email"
                               type="email"
-                              class="form-control p-3"
+                              class="form-control form-auth__input"
                               id="LoginEmail1"
                               aria-describedby="emailHelp"
                            />
                         </div>
-                        <div class="mb-3">
-                           <label for="LoginPassword1" class="form-label">Password</label>
-                           <a class="float-end" href="#">Forgot Password?</a>
+                        <div class="form-auth__block">
+                           <label for="LoginPassword1" class="form-label form-auth__label">Password</label>
+                           <a class="form-auth__forgot-pass float-end" href="#">Forgot Password?</a>
                            <input
                               placeholder="Enter your password"
                               type="password"
                               autocomplete="false"
-                              class="form-control p-3"
+                              class="form-control form-auth__input"
                               id="LoginPassword1"
                            />
                         </div>
-                        <button type="submit" class="btn btn-primary w-100 fw-semibold p-3">Login</button>
+                        <button type="submit" class="form-auth__btn btn btn-primary w-100 fw-semibold p-3">Login</button>
                      </form>
-                     <p class="text-center">Haven’t account yet?</p>
-                     <a href="#" class="d-block mx-auto text-center">Register Now</a>
+                     <p class="login__form-text text-center">Haven’t account yet?</p>
+                     <a href="#" class="login__form-reg-link d-block mx-auto text-center">Register Now</a>
                   </div>
                </div>
             </div>

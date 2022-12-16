@@ -3,6 +3,7 @@ import '../scss/style.scss'
 //VendorFile========================================================================================================================================================
 import $ from 'jquery'
 import './vendor.js'
+import Swiper, { Pagination } from 'swiper'
 //Select Languages========================================================================================================================================================
 selects()
 function selects() {
@@ -29,6 +30,21 @@ function selects() {
       }
    })
 }
+//Swiper========================================================================================================================================================
+const swiper = new Swiper('.login-slider', {
+   modules: [Pagination],
+   direction: 'horizontal',
+   grabCursor: true,
+   watchOverflow: true,
+   pagination: {
+      el: '.login-slider__pagination',
+      type: 'bullets',
+      clickable: true,
+   },
+   autoplay: {
+      delay: 1000,
+   },
+})
 //Notify========================================================================================================================================================
 const notifyTempWithBtn = document.querySelector('#notifyTemplate').innerHTML
 const notifyTempWithoutBtn = document.querySelector('#notifyTemplateWithout').innerHTML
@@ -73,3 +89,4 @@ $('.login-notify__btn-accept').on('click', function () {
    alert($(this).text() + ' clicked!')
    $(this).trigger('notify-hide')
 })
+//========================================================================================================================================================
