@@ -228,6 +228,22 @@ body {
   border-color: var(--blue);
 }
 
+.error .form-auth__input {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 67, 107, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(255, 67, 107, 0.25);
+  border: 1px solid rgba(255, 67, 107, 0.5);
+}
+
+.form-auth__input-error {
+  display: none;
+  margin-top: 10px;
+  color: var(--red);
+}
+
+.error .form-auth__input-error {
+  display: block;
+}
+
 .form-auth__forgot-pass {
   text-decoration: none;
   color: var(--blue);

@@ -228,6 +228,18 @@ body {
       &:focus {
          border-color: var(--blue);
       }
+      .error & {
+         box-shadow: 0 0 0 0.25rem rgb(255 67 107 / 25%);
+         border: 1px solid rgba(255, 67, 107, 0.5);
+      }
+   }
+   &__input-error {
+      display: none;
+      margin-top: 10px;
+      color: var(--red);
+      .error & {
+         display: block;
+      }
    }
 
    &__forgot-pass {
