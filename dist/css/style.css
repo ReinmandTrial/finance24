@@ -304,11 +304,6 @@ body {
   display: block;
 }
 
-.form-auth__forgot-pass {
-  text-decoration: none;
-  color: var(--blue);
-}
-
 .form-auth__btn {
   background-color: var(--blue);
   padding: 14px 0px;
@@ -322,6 +317,10 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 715px;
+}
+
+.login a {
+  text-decoration: none;
 }
 
 .login__slider-top-line {
@@ -391,9 +390,8 @@ body {
   margin-bottom: 5px;
 }
 
-.login__form-reg-link {
+.login__form-link {
   color: var(--blue);
-  text-decoration: none;
 }
 
 .login-notify {
