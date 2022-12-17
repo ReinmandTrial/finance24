@@ -8203,6 +8203,7 @@
             direction: "horizontal",
             grabCursor: true,
             watchOverflow: true,
+            loop: true,
             pagination: {
                 el: ".login-slider__pagination",
                 type: "bullets",
@@ -8212,39 +8213,5 @@
                 delay: 1e3
             }
         });
-        const notifyTempWithBtn = document.querySelector("#notifyTemplate").innerHTML;
-        const notifyTempWithoutBtn = document.querySelector("#notifyTemplateWithout").innerHTML;
-        jquery.notify.addStyle("notifyWithBtn", {
-            html: notifyTempWithBtn,
-            classes: {}
-        });
-        jquery.notify.addStyle("notifyTempWithoutBtn", {
-            html: notifyTempWithoutBtn,
-            classes: {}
-        });
-        jquery.notify({
-            name: "Hi Anastassia!",
-            text: "Lorem ipsum dolor sit amet, consectetur "
-        }, {
-            style: "notifyWithBtn",
-            autoHide: false
-        });
-        jquery.notify({
-            name: "Hi Anastassia!",
-            text: "Lorem ipsum dolor sit amet, consectetur "
-        }, {
-            style: "notifyTempWithoutBtn",
-            autoHide: false
-        });
-        jquery(".login-notify__close-btn").on("click", (function() {
-            jquery(this).trigger("notify-hide");
-        }));
-        jquery(".login-notify__btn-reject").on("click", (function() {
-            jquery(this).trigger("notify-hide");
-        }));
-        jquery(".login-notify__btn-accept").on("click", (function() {
-            alert(jquery(this).text() + " clicked!");
-            jquery(this).trigger("notify-hide");
-        }));
     })();
 })();
