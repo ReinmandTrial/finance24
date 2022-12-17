@@ -321,6 +321,7 @@ body {
 
 .login a {
   text-decoration: none;
+  color: var(--blue);
 }
 
 .login__slider-top-line {
@@ -391,7 +392,9 @@ body {
 }
 
 .login__form-link {
-  color: var(--blue);
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .login-notify {
