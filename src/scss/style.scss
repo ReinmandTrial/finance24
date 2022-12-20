@@ -91,6 +91,9 @@ body {
    }
 
    &__body {
+      button {
+         color: inherit;
+      }
       right: 0;
       top: calc(100% + 5px);
       background: #ffffff;
@@ -288,6 +291,7 @@ body {
    }
    &__btn {
       background-color: var(--blue);
+      color: var(--white);
       padding: 14px 0px;
       border-radius: 5px;
       border: none;
@@ -304,6 +308,7 @@ body {
       text-decoration: none;
       color: var(--blue);
    }
+
    &__content {
    }
 
@@ -320,12 +325,21 @@ body {
       }
    }
    //+++++++++++++++++++++++++++++++++++
-
+   &__form-col {
+      @media (max-width: 991.98px) {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 100px 0px !important;
+      }
+   }
    &__form-top-line {
       @media (min-width: 991.98px) {
          display: none !important;
       }
       padding: 15px 15px;
+      top: 0;
+      left: 0;
       .lang-select__head {
          background: #ffffff;
          border: 1px solid #d7d7d7;
@@ -335,15 +349,18 @@ body {
    &__form-content {
       max-width: 415px;
       margin: auto;
-      top: calc(100vh / 2 - 305px);
+      position: absolute;
+      top: calc(100vh / 2 - 291px);
+      left: 50%;
+      transform: translate(-50%, 0px);
       @media (max-width: 991.98px) {
-         padding: 0px 15px 30px 15px;
+         position: static;
+         transform: translate(0px, 0px);
+         padding: 50px 15px 100px 15px;
       }
-      @media (max-height: 700px) {
+
+      @media (max-height: 700px) and (min-width: 991.98px) {
          top: 10%;
-      }
-      @media (max-height: 800px) and (max-width: 991.98px) {
-         top: 15%;
       }
    }
 

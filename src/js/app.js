@@ -47,47 +47,47 @@ const swiper = new Swiper('.login-slider', {
    },
 })
 //Notify========================================================================================================================================================
-// const notifyTempWithBtn = document.querySelector('#notifyTemplate').innerHTML
-// const notifyTempWithoutBtn = document.querySelector('#notifyTemplateWithout').innerHTML
-// $.notify.addStyle('notifyWithBtn', {
-//    html: notifyTempWithBtn,
-//    classes: {},
-// })
-// $.notify.addStyle('notifyTempWithoutBtn', {
-//    html: notifyTempWithoutBtn,
-//    classes: {},
-// })
+const notifyTempWithBtn = document.querySelector('#notifyTemplate').innerHTML
+const notifyTempWithoutBtn = document.querySelector('#notifyTemplateWithout').innerHTML
+$.notify.addStyle('notifyWithBtn', {
+   html: notifyTempWithBtn,
+   classes: {},
+})
+$.notify.addStyle('notifyTempWithoutBtn', {
+   html: notifyTempWithoutBtn,
+   classes: {},
+})
 
-// $.notify(
-//    {
-//       name: 'Hi Anastassia!',
-//       text: 'Lorem ipsum dolor sit amet, consectetur ',
-//    },
-//    {
-//       style: 'notifyWithBtn',
-//       autoHide: false,
-//    }
-// )
-// $.notify(
-//    {
-//       name: 'Hi Anastassia!',
-//       text: 'Lorem ipsum dolor sit amet, consectetur ',
-//    },
-//    {
-//       style: 'notifyTempWithoutBtn',
-//       autoHide: false,
-//    }
-// )
+$.notify(
+   {
+      name: 'Hi Anastassia!',
+      text: 'Lorem ipsum dolor sit amet, consectetur ',
+   },
+   {
+      style: 'notifyWithBtn',
+      autoHide: false,
+   }
+)
+$.notify(
+   {
+      name: 'Hi Anastassia!',
+      text: 'Lorem ipsum dolor sit amet, consectetur ',
+   },
+   {
+      style: 'notifyTempWithoutBtn',
+      autoHide: false,
+   }
+)
 
-// $('.login-notify__close-btn').on('click', function () {
-//    $(this).trigger('notify-hide')
-// })
-// $('.login-notify__btn-reject').on('click', function () {
-//    $(this).trigger('notify-hide')
-// })
+$('.login-notify__close-btn').on('click', function () {
+   $(this).trigger('notify-hide')
+})
+$('.login-notify__btn-reject').on('click', function () {
+   $(this).trigger('notify-hide')
+})
 
-// $('.login-notify__btn-accept').on('click', function () {
-//    alert($(this).text() + ' clicked!')
-//    $(this).trigger('notify-hide')
-// })
+$('.login-notify__btn-accept').on('click', function () {
+   alert($(this).text() + ' clicked!')
+   $(this).trigger('notify-hide')
+})
 //========================================================================================================================================================
