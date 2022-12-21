@@ -16,7 +16,7 @@ function selects() {
          }
          if (el.target.classList.contains('lang-select__item')) {
             const curVal = select.querySelector('[data-select-val]')
-            curVal.textContent = el.target.value
+            curVal.textContent = el.target.dataset.val
             select.classList.remove('_active')
          }
       })

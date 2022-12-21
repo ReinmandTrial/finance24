@@ -307,15 +307,14 @@ body {
 }
 //main========================================================================================================================================================
 .login {
+   a {
+      text-decoration: none;
+   }
    height: 100vh;
    overflow-x: hidden;
    overflow-y: auto;
    min-height: 715px;
    letter-spacing: 0.25px;
-   a {
-      text-decoration: none;
-      color: var(--blue);
-   }
 
    &__content {
    }
@@ -377,6 +376,9 @@ body {
    }
 
    &__form-content {
+      a {
+         color: var(--blue);
+      }
       max-width: 415px;
       margin: auto;
       position: absolute;
