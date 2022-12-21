@@ -1,5 +1,6 @@
 import jQuery from 'jquery'
-/* Notify.js - http://notifyjs.com/ Copyright (c) 2015 MIT */(function (factory) {
+/* Notify.js - http://notifyjs.com/ Copyright (c) 2015 MIT */
+;(function (factory) {
    // UMD start
    // https://github.com/umdjs/umd/blob/master/jqueryPluginCommonjs.js
    if (typeof define === 'function' && define.amd) {

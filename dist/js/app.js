@@ -8223,20 +8223,6 @@
             html: notifyTempWithoutBtn,
             classes: {}
         });
-        jquery.notify({
-            name: "Hi Anastassia!",
-            text: "Lorem ipsum dolor sit amet, consectetur "
-        }, {
-            style: "notifyWithBtn",
-            autoHide: false
-        });
-        jquery.notify({
-            name: "Hi Anastassia!",
-            text: "Lorem ipsum dolor sit amet, consectetur "
-        }, {
-            style: "notifyTempWithoutBtn",
-            autoHide: false
-        });
         jquery(".notification__close-btn").on("click", (function() {
             jquery(this).trigger("notify-hide");
         }));
@@ -8246,14 +8232,16 @@
         jquery(".notification__btn-accept").on("click", (function() {
             alert(jquery(this).text() + " clicked!");
             jquery(this).trigger("notify-hide");
-        }));
+        })).notify({}, {});
         jquery(".top-line__logo").on("click", (el => {
             jquery.notify({
                 name: "Hi Anastassia!",
                 text: "Lorem ipsum dolor sit amet, consectetur "
             }, {
                 style: "notifyWithBtn",
-                autoHide: false
+                autoHide: false,
+                showAnimation: "show",
+                hideAnimation: "hide"
             });
             jquery(".notification__close-btn").on("click", (function() {
                 jquery(this).trigger("notify-hide");

@@ -49,6 +49,7 @@ const swiper = new Swiper('.login-slider', {
 //Notify========================================================================================================================================================
 const notifyTempWithBtn = document.querySelector('#notifyTemplate').innerHTML
 const notifyTempWithoutBtn = document.querySelector('#notifyTemplateWithout').innerHTML
+
 $.notify.addStyle('notifyWithBtn', {
    html: notifyTempWithBtn,
    classes: {},
@@ -58,27 +59,30 @@ $.notify.addStyle('notifyTempWithoutBtn', {
    classes: {},
 })
 
-$.notify(
-   {
-      name: 'Hi Anastassia!',
-      text: 'Lorem ipsum dolor sit amet, consectetur ',
-   },
-   {
-      style: 'notifyWithBtn',
-      autoHide: false,
-   }
-)
-$.notify(
-   {
-      name: 'Hi Anastassia!',
-      text: 'Lorem ipsum dolor sit amet, consectetur ',
-   },
-   {
-      style: 'notifyTempWithoutBtn',
-      autoHide: false,
-   }
-)
-
+// $.notify(
+//    {
+//       name: 'Hi Anastassia!',
+//       text: 'Lorem ipsum dolor sit amet, consectetur ',
+//    },
+//    {
+//       style: 'notifyWithBtn',
+//       autoHide: false,
+//       showAnimation: 'show',
+//       hideAnimation: 'hide',
+//    }
+// )
+// $.notify(
+//    {
+//       name: 'Hi Anastassia!',
+//       text: 'Lorem ipsum dolor sit amet, consectetur ',
+//    },
+//    {
+//       style: 'notifyTempWithoutBtn',
+//       autoHide: false,
+//       showAnimation: 'show',
+//       hideAnimation: 'hide',
+//    }
+// )
 $('.notification__close-btn').on('click', function () {
    $(this).trigger('notify-hide')
 })
@@ -86,11 +90,13 @@ $('.notification__btn-reject').on('click', function () {
    $(this).trigger('notify-hide')
 })
 
-$('.notification__btn-accept').on('click', function () {
-   alert($(this).text() + ' clicked!')
-   $(this).trigger('notify-hide')
-})
+$('.notification__btn-accept')
+   .on('click', function () {
+      alert($(this).text() + ' clicked!')
+      $(this).trigger('notify-hide')
+   })
 
+   .notify({}, {})
 $('.top-line__logo').on('click', (el) => {
    $.notify(
       {
@@ -100,8 +106,11 @@ $('.top-line__logo').on('click', (el) => {
       {
          style: 'notifyWithBtn',
          autoHide: false,
+         showAnimation: 'show',
+         hideAnimation: 'hide',
       }
    )
+
    $('.notification__close-btn').on('click', function () {
       $(this).trigger('notify-hide')
    })
@@ -114,4 +123,5 @@ $('.top-line__logo').on('click', (el) => {
       $(this).trigger('notify-hide')
    })
 })
+
 //========================================================================================================================================================
