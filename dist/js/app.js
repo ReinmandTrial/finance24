@@ -8237,15 +8237,34 @@
             style: "notifyTempWithoutBtn",
             autoHide: false
         });
-        jquery(".login-notify__close-btn").on("click", (function() {
+        jquery(".notification__close-btn").on("click", (function() {
             jquery(this).trigger("notify-hide");
         }));
-        jquery(".login-notify__btn-reject").on("click", (function() {
+        jquery(".notification__btn-reject").on("click", (function() {
             jquery(this).trigger("notify-hide");
         }));
-        jquery(".login-notify__btn-accept").on("click", (function() {
+        jquery(".notification__btn-accept").on("click", (function() {
             alert(jquery(this).text() + " clicked!");
             jquery(this).trigger("notify-hide");
+        }));
+        jquery(".top-line__logo").on("click", (el => {
+            jquery.notify({
+                name: "Hi Anastassia!",
+                text: "Lorem ipsum dolor sit amet, consectetur "
+            }, {
+                style: "notifyWithBtn",
+                autoHide: false
+            });
+            jquery(".notification__close-btn").on("click", (function() {
+                jquery(this).trigger("notify-hide");
+            }));
+            jquery(".notification__btn-reject").on("click", (function() {
+                jquery(this).trigger("notify-hide");
+            }));
+            jquery(".notification__btn-accept").on("click", (function() {
+                alert(jquery(this).text() + " clicked!");
+                jquery(this).trigger("notify-hide");
+            }));
         }));
     })();
 })();

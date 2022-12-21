@@ -273,6 +273,8 @@ body {
       border: 1px solid #d7d7d7;
       border-radius: 5px;
       font-size: 15px;
+      letter-spacing: 0.25px;
+
       &:focus {
          border-color: var(--blue);
       }
@@ -304,6 +306,7 @@ body {
    overflow-x: hidden;
    overflow-y: auto;
    min-height: 715px;
+   letter-spacing: 0.25px;
    a {
       text-decoration: none;
       color: var(--blue);
@@ -405,13 +408,14 @@ body {
    }
 }
 // //Notify============================================================================================================================================================================================================================================================================================================================================================================================================================================
-.login-notify {
+.notification {
    padding: 14px 16px;
    color: #ffffff;
    position: relative;
    width: 340px;
    overflow: hidden;
    border-radius: 20px;
+   letter-spacing: 0.25px;
    &::after {
       content: '';
       position: absolute;
@@ -491,6 +495,7 @@ body {
       font-size: 16px;
       line-height: 125%;
       transition: all 0.3s ease 0s;
+      letter-spacing: 0.25px;
    }
    &__close-btn {
       position: absolute;

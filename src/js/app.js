@@ -79,15 +79,39 @@ $.notify(
    }
 )
 
-$('.login-notify__close-btn').on('click', function () {
+$('.notification__close-btn').on('click', function () {
    $(this).trigger('notify-hide')
 })
-$('.login-notify__btn-reject').on('click', function () {
+$('.notification__btn-reject').on('click', function () {
    $(this).trigger('notify-hide')
 })
 
-$('.login-notify__btn-accept').on('click', function () {
+$('.notification__btn-accept').on('click', function () {
    alert($(this).text() + ' clicked!')
    $(this).trigger('notify-hide')
+})
+
+$('.top-line__logo').on('click', (el) => {
+   $.notify(
+      {
+         name: 'Hi Anastassia!',
+         text: 'Lorem ipsum dolor sit amet, consectetur ',
+      },
+      {
+         style: 'notifyWithBtn',
+         autoHide: false,
+      }
+   )
+   $('.notification__close-btn').on('click', function () {
+      $(this).trigger('notify-hide')
+   })
+   $('.notification__btn-reject').on('click', function () {
+      $(this).trigger('notify-hide')
+   })
+
+   $('.notification__btn-accept').on('click', function () {
+      alert($(this).text() + ' clicked!')
+      $(this).trigger('notify-hide')
+   })
 })
 //========================================================================================================================================================
