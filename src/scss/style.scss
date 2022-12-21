@@ -1,6 +1,6 @@
 // Fonts===========================================================================================================================================================================================================================================================================
 @import url('https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Inter:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter:300,500,700&display=swap');
 //Config========================================================================================================================================================
 :root {
    --black: #111111;
@@ -29,11 +29,19 @@ body {
    gap: 20px;
 
    &__logo {
-      width: 180px;
-      @media (max-width: 575.98px) {
-         width: 140px;
+      display: flex;
+      gap: 13px;
+      align-items: center;
+      max-width: 180px;
+      & span {
+         font-family: 'Inter';
+         font-weight: 500;
+         font-size: 23px;
+         letter-spacing: -0.03em;
+         color: var(--white);
       }
       img {
+         flex: none;
          max-width: 100%;
          object-fit: contain;
       }
@@ -43,6 +51,7 @@ body {
    }
 }
 .lang-select {
+   flex: 0 0 65px;
    &._active {
       .lang-select__body {
          opacity: 1;
@@ -60,7 +69,8 @@ body {
       border: none;
       color: #ffffff;
       gap: 5px;
-      max-width: 65px;
+      justify-content: space-between;
+      width: 100%;
       position: relative;
       background-color: transparent;
       line-height: 100%;
@@ -75,6 +85,7 @@ body {
          left: 0;
          z-index: -1;
          border-radius: 5px;
+         transition: all 0.3s ease 0s;
       }
    }
 
@@ -91,27 +102,19 @@ body {
    }
 
    &__body {
-      button {
-         color: inherit;
-      }
       right: 0;
       top: calc(100% + 5px);
       background: #ffffff;
-      border: 1px solid #d7d7d7;
       border-radius: 10px;
-      padding: 10px 20px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-row: repeat(3, 1fr);
-      grid-gap: 10px;
+      padding: 15px 20px;
       word-wrap: break-word;
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease 0s;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      max-height: 600px;
-      overflow: hidden;
-      overflow-y: auto;
+      background: #ffffff;
+      box-shadow: 0px 8px 64px rgba(0, 16, 33, 0.5);
+      border-radius: 5px;
+      width: 150px;
       @media (max-width: 575.98px) {
          max-width: 290px;
          grid-template-columns: repeat(2, 1fr);
@@ -122,15 +125,17 @@ body {
    &__item {
       display: block;
       border: none;
-      background-color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 180%;
+      letter-spacing: -0.03em;
+      color: rgba(17, 17, 17, 0.5);
+      background: transparent;
       border-radius: 10px;
-      padding: 5px 10px;
       transition: all 0.3s ease 0s;
-      @media (any-hover: hover) {
-         &:hover {
-            background-color: #d7d7d7;
-            transition: all 0.3s ease 0s;
-         }
+      padding: 0px 0px 0px 0px;
+      &:hover {
+         color: #111111;
       }
    }
 }
@@ -340,12 +345,34 @@ body {
       @media (min-width: 991.98px) {
          display: none !important;
       }
+      & .top-line__logo {
+         span {
+            color: #111111;
+         }
+      }
       padding: 15px 15px;
       top: 0;
       left: 0;
-      .lang-select__head {
+      & .lang-select._active {
+         .lang-select__head {
+            background: #f3f7fb;
+            border-color: #f3f7fb;
+         }
+      }
+      & .lang-select__head {
          background: #ffffff;
          border: 1px solid #d7d7d7;
+         transition: all 0.3s ease 0s;
+         @media (any-hover: hover) {
+            &:hover {
+               background: #f3f7fb;
+               border-color: #f3f7fb;
+               transition: all 0.3s ease 0s;
+            }
+         }
+      }
+      & .lang-select__body {
+         box-shadow: 0px 8px 64px rgba(198, 217, 236, 0.5);
       }
    }
 
