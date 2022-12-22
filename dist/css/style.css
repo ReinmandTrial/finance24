@@ -362,7 +362,7 @@ body {
   display: block;
 }
 
-.login__form._active .form-auth__btn_text {
+.form-auth__btn._active .form-auth__btn_text {
   display: none;
 }
 
@@ -371,7 +371,7 @@ body {
   display: none;
 }
 
-.login__form._active .form-auth__btn_spinner {
+.form-auth__btn._active .form-auth__btn_spinner {
   display: block;
 }
 

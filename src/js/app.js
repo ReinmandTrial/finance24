@@ -124,10 +124,9 @@ $('.top-line__logo').on('click', (el) => {
 //Login Btn========================================================================================================================================================
 
 const loginFormEl = document.querySelector('#loginForm')
+const loginBtnEl = document.querySelector('#loginButton')
 
 loginFormEl.addEventListener('click', (el) => {
    el.preventDefault()
-   if (el.target.classList.contains('form-auth__btn')) {
-      loginFormEl.classList.toggle('_active')
-   }
+   loginBtnEl.classList.toggle('_active')
 })
