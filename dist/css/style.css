@@ -340,10 +340,37 @@ body {
 .form-auth__btn {
   background-color: var(--blue);
   color: var(--white);
-  padding: 14px 0px;
+  padding: 10px 10px;
   border-radius: 5px;
   border: none;
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 55px;
+  position: relative;
+}
+
+.form-auth__btn_text {
+  display: block;
+}
+
+.login__form._active .form-auth__btn_text {
+  display: none;
+}
+
+.form-auth__btn_spinner {
+  display: none;
+}
+
+.login__form._active .form-auth__btn_spinner {
+  display: block;
 }
 
 .login {

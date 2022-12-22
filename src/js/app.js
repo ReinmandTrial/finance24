@@ -90,13 +90,11 @@ $('.notification__btn-reject').on('click', function () {
    $(this).trigger('notify-hide')
 })
 
-$('.notification__btn-accept')
-   .on('click', function () {
-      alert($(this).text() + ' clicked!')
-      $(this).trigger('notify-hide')
-   })
+$('.notification__btn-accept').on('click', function () {
+   alert($(this).text() + ' clicked!')
+   $(this).trigger('notify-hide')
+})
 
-   .notify({}, {})
 $('.top-line__logo').on('click', (el) => {
    $.notify(
       {
@@ -123,5 +121,13 @@ $('.top-line__logo').on('click', (el) => {
       $(this).trigger('notify-hide')
    })
 })
+//Login Btn========================================================================================================================================================
 
-//========================================================================================================================================================
+const loginFormEl = document.querySelector('#loginForm')
+
+loginFormEl.addEventListener('click', (el) => {
+   el.preventDefault()
+   if (el.target.classList.contains('form-auth__btn')) {
+      loginFormEl.classList.toggle('_active')
+   }
+})

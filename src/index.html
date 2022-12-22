@@ -124,7 +124,7 @@
                         </a>
                      </div>
                      <p class="login__form-or-text">or log in with email</p>
-                     <form class="login__form form-auth">
+                     <form id="loginForm" class="login__form form-auth">
                         <div class="form-auth__block">
                            <label for="LoginEmail1" class="form-label form-auth__label">Your email </label>
                            <input
@@ -147,7 +147,12 @@
                               id="LoginPassword1"
                            />
                         </div>
-                        <button type="submit" class="form-auth__btn btn btn-primary w-100">Login</button>
+                        <button type="submit" class="form-auth__btn btn btn-primary w-100">
+                           <span class="form-auth__btn_text">Login</span>
+                           <span class="form-auth__btn_spinner spinner-border text-light" role="status">
+                              <span class="visually-hidden">Loading...</span>
+                           </span>
+                        </button>
                      </form>
                      <p class="login__form-text text-center">Haven’t account yet?</p>
                      <a href="#" class="login__form-link d-block mx-auto text-center w-auto">Register Now</a>

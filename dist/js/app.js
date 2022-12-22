@@ -8232,7 +8232,7 @@
         jquery(".notification__btn-accept").on("click", (function() {
             alert(jquery(this).text() + " clicked!");
             jquery(this).trigger("notify-hide");
-        })).notify({}, {});
+        }));
         jquery(".top-line__logo").on("click", (el => {
             jquery.notify({
                 name: "Hi Anastassia!",
@@ -8253,6 +8253,11 @@
                 alert(jquery(this).text() + " clicked!");
                 jquery(this).trigger("notify-hide");
             }));
+        }));
+        const loginFormEl = document.querySelector("#loginForm");
+        loginFormEl.addEventListener("click", (el => {
+            el.preventDefault();
+            if (el.target.classList.contains("form-auth__btn")) loginFormEl.classList.toggle("_active");
         }));
     })();
 })();
