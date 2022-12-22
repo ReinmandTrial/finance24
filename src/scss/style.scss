@@ -310,6 +310,7 @@ body {
       height: 55px;
       position: relative;
       &_text {
+         pointer-events: none;
          display: block;
          .login__form._active & {
             display: none;
@@ -317,6 +318,7 @@ body {
       }
 
       &_spinner {
+         pointer-events: none;
          display: none;
          .login__form._active & {
             display: block;

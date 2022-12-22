@@ -358,6 +358,7 @@ body {
 }
 
 .form-auth__btn_text {
+  pointer-events: none;
   display: block;
 }
 
@@ -366,6 +367,7 @@ body {
 }
 
 .form-auth__btn_spinner {
+  pointer-events: none;
   display: none;
 }
 
