@@ -1,34 +1,44 @@
 //Style======================================================================================================================================
-import '../scss/style.scss'
+'use strict';
+
+import '../scss/style.scss';
+import './vendor.js';
+import 'swiper/css';
+
+import Swiper, { Pagination } from 'swiper';
+
+import $ from 'jquery';
+
 //VendorFile========================================================================================================================================================
-import $ from 'jquery'
-import './vendor.js'
-import Swiper, { Pagination } from 'swiper'
+
 //Select Languages========================================================================================================================================================
-selects()
+selects();
 function selects() {
-   const selectListEl = document.querySelectorAll('[data-select]')
+   const selectListEl = document.querySelectorAll('[data-select]');
    selectListEl.forEach((select) =>
       select.addEventListener('click', (el) => {
-         el.stopPropagation()
+         el.stopPropagation();
          if (el.target.classList.contains('lang-select__head')) {
-            select.classList.toggle('_active')
+            select.classList.toggle('_active');
          }
          if (el.target.classList.contains('lang-select__item')) {
-            const curVal = select.querySelector('[data-select-val]')
-            curVal.textContent = el.target.dataset.val
-            select.classList.remove('_active')
+            const curVal = select.querySelector('[data-select-val]');
+            curVal.textContent = el.target.dataset.val;
+            select.classList.remove('_active');
          }
       })
-   )
+   );
    document.body.addEventListener('click', (el) => {
-      el.stopPropagation()
-      if (!el.target.classList.contains('lang-select__head') || !el.target.classList.contains('lang-select__item')) {
+      el.stopPropagation();
+      if (
+         !el.target.classList.contains('lang-select__head') ||
+         !el.target.classList.contains('lang-select__item')
+      ) {
          selectListEl.forEach((el) => {
-            el.classList.remove('_active')
-         })
+            el.classList.remove('_active');
+         });
       }
-   })
+   });
 }
 //Swiper========================================================================================================================================================
 const swiper = new Swiper('.login-slider', {
@@ -45,19 +55,21 @@ const swiper = new Swiper('.login-slider', {
    autoplay: {
       delay: 1000,
    },
-})
+});
 //Notify========================================================================================================================================================
-const notifyTempWithBtn = document.querySelector('#notifyTemplate').innerHTML
-const notifyTempWithoutBtn = document.querySelector('#notifyTemplateWithout').innerHTML
+const notifyTempWithBtn = document.querySelector('#notifyTemplate').innerHTML;
+const notifyTempWithoutBtn = document.querySelector(
+   '#notifyTemplateWithout'
+).innerHTML;
 
 $.notify.addStyle('notifyWithBtn', {
    html: notifyTempWithBtn,
    classes: {},
-})
+});
 $.notify.addStyle('notifyTempWithoutBtn', {
    html: notifyTempWithoutBtn,
    classes: {},
-})
+});
 
 // $.notify(
 //    {
@@ -84,16 +96,16 @@ $.notify.addStyle('notifyTempWithoutBtn', {
 //    }
 // )
 $('.notification__close-btn').on('click', function () {
-   $(this).trigger('notify-hide')
-})
+   $(this).trigger('notify-hide');
+});
 $('.notification__btn-reject').on('click', function () {
-   $(this).trigger('notify-hide')
-})
+   $(this).trigger('notify-hide');
+});
 
 $('.notification__btn-accept').on('click', function () {
-   alert($(this).text() + ' clicked!')
-   $(this).trigger('notify-hide')
-})
+   alert($(this).text() + ' clicked!');
+   $(this).trigger('notify-hide');
+});
 
 $('.top-line__logo').on('click', (el) => {
    $.notify(
@@ -107,26 +119,26 @@ $('.top-line__logo').on('click', (el) => {
          showAnimation: 'show',
          hideAnimation: 'hide',
       }
-   )
+   );
 
    $('.notification__close-btn').on('click', function () {
-      $(this).trigger('notify-hide')
-   })
+      $(this).trigger('notify-hide');
+   });
    $('.notification__btn-reject').on('click', function () {
-      $(this).trigger('notify-hide')
-   })
+      $(this).trigger('notify-hide');
+   });
 
    $('.notification__btn-accept').on('click', function () {
-      alert($(this).text() + ' clicked!')
-      $(this).trigger('notify-hide')
-   })
-})
+      alert($(this).text() + ' clicked!');
+      $(this).trigger('notify-hide');
+   });
+});
 //Login Btn========================================================================================================================================================
 
-const loginFormEl = document.querySelector('#loginForm')
-const loginBtnEl = document.querySelector('#loginButton')
+const loginFormEl = document.querySelector('#loginForm');
+const loginBtnEl = document.querySelector('#loginButton');
 
 loginFormEl.addEventListener('click', (el) => {
-   el.preventDefault()
-   loginBtnEl.classList.toggle('_active')
-})
+   el.preventDefault();
+   loginBtnEl.classList.toggle('_active');
+});
