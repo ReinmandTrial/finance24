@@ -15,27 +15,29 @@
       <div class="container-fluid h-100 p-0">
          <div class="login__content row h-100 p-0 m-0">
             <div class="col-6 h-100 d-none d-lg-block p-0 m-0 position-relative">
-               <div class="login__slider-top-line top-line d-flex justify-content-between align-items-center w-100 position-absolute">
-                  <a class="top-line__logo" href="#">
-                     <img class="h-100" src="@img/logo.svg" alt="logo" />
-                     <span>Finance24</span>
-                  </a>
-                  <div data-select class="top-line__lang-select lang-select position-relative">
-                     <button type="button" class="lang-select__head d-flex align-items-center w-100">
-                        <span data-select-val class="lang-select__value">EN</span>
-                        <img class="lang-select__arrow" src="@img/arrow-white.svg" alt="arrow" />
-                     </button>
-                     <div class="lang-select__body position-absolute">
-                        <a href="#" data-val="DE" class="lang-select__item">Deutsch</a>
-                        <a href="#" data-val="EN" class="lang-select__item">English</a>
-                        <a href="#" data-val="FR" class="lang-select__item">Français</a>
-                        <a href="#" data-val="ES" class="lang-select__item">Español</a>
-                        <a href="#" data-val="IT" class="lang-select__item">Italiano</a>
-                        <a href="#" data-val="UK" class="lang-select__item">Українська</a>
+               <div class="dark h-100 login__slider login-slider swiper w-100 h-100 position-relative overflow-hidden">
+                  <div class="login__slider-top-line top-line d-flex justify-content-between align-items-center w-100 position-absolute">
+                     <a class="top-line__logo" href="#">
+                        <img class="h-100" src="@img/logo.svg" alt="logo" />
+                        <span>Finance24</span>
+                     </a>
+                     <div data-select class="top-line__lang-select lang-select position-relative">
+                        <button type="button" class="lang-select__head d-flex align-items-center w-100">
+                           <span data-select-val class="lang-select__value">EN</span>
+                           <svg class="lang-select__arrow" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 1L5 5L9 1" stroke="white" />
+                           </svg>
+                        </button>
+                        <div class="lang-select__body position-absolute">
+                           <a href="#" data-val="DE" class="lang-select__item">Deutsch</a>
+                           <a href="#" data-val="EN" class="lang-select__item">English</a>
+                           <a href="#" data-val="FR" class="lang-select__item">Français</a>
+                           <a href="#" data-val="ES" class="lang-select__item">Español</a>
+                           <a href="#" data-val="IT" class="lang-select__item">Italiano</a>
+                           <a href="#" data-val="UK" class="lang-select__item">Українська</a>
+                        </div>
                      </div>
                   </div>
-               </div>
-               <div class="h-100 login__slider login-slider swiper w-100 h-100 position-relative overflow-hidden">
                   <div class="login-slider__wrapper swiper-wrapper h-100 d-flex position-relative">
                      <div class="login-slider__slide login-slide swiper-slide h-100 position-relative">
                         <div class="login-slide__image position-absolute w-100 h-100 top-0 start-0">
