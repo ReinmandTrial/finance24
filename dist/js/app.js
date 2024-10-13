@@ -4611,7 +4611,7 @@
                 if (typeof val === "string") val = parseInt(val, 10); else if (typeof val !== "number") return;
                 if (isNaN(val)) return;
                 opp = positions[opposites[pos.charAt(0)]];
-                pos;
+                0;
                 if (obj[opp] !== void 0) {
                     pos = positions[opp.charAt(0)];
                     val = -val;
